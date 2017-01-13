@@ -21,6 +21,10 @@ cd ${SITE_ROOT}
 
 bundle install
 bundle exec jekyll build
-bundle exec check-links ./_site/os --no-warnings
-bundle exec check-links ./_site/rancher --no-warnings
+
+bundle exec htmlproofer ./_site/os --as-links
+bundle exec htmlproofer ./_site/rancher --as-links
+
+# bundle exec check-links ./_site/os --no-warnings
+# bundle exec check-links ./_site/rancher --no-warnings
 
