@@ -23,7 +23,7 @@ bundle install
 bundle exec jekyll build
 
 # run for each file to prevent timeout by travis
-find ./ -name *.html -type f -exec htmlproofer {} \;
+find ./_site -name *.html -type f -exec htmlproofer {} \;
 
 # bundle exec htmlproofer ./_site/os
 # bundle exec htmlproofer ./_site/rancher --as-links
